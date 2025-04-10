@@ -89,7 +89,9 @@
             Active Directory will always validate a new Directory Services Repair Mode password to make sure it meets the domain’s password complexity requirements; this validation also calls into password filter dlls like Microsoft Entra Password Protection. If the new DSRM password is rejected, the following error message results:
                 <br>
                 <div class="code-area">
-                <p>C:\>ntdsutil.exe ntdsutil: set dsrm password Reset DSRM Administrator Password: reset password on server null Please type password for DS Restore Mode Administrator Account: ******** Please confirm new password: ******** Setting password failed. WIN32 Error Code: 0xa91 Error Message: Password doesn't meet the requirements of the filter dll's</p>
+                <p>C:\>ntdsutil.exe <br>
+                    ntdsutil: set dsrm password <br>
+                    Reset DSRM Administrator Password: reset password on server null Please type password for DS Restore Mode Administrator Account: ******** Please confirm new password: ******** Setting password failed. WIN32 Error Code: 0xa91 Error Message: Password doesn't meet the requirements of the filter dll's</p>
                 </div>
                 <br>
 When Microsoft Entra Password Protection logs the password validation event log event(s) for an Active Directory DSRM password, it is expected that the event log messages will not include a user name. This behavior occurs because the DSRM account is a local account that is not part of the actual Active Directory domain.
@@ -97,7 +99,9 @@ When Microsoft Entra Password Protection logs the password validation event log 
 To reset the DSRM Password use the following command line
 <div class="code-area">
                 <br>
-                C:\>ntdsutil.exe ntdsutil: set dsrm password Reset DSRM Administrator Password: reset password on server null Please type password for DS Restore Mode Administrator Account: ******** Please confirm new password: ******** The password has successfully been reset (CTRL + C) to exit
+                C:\>ntdsutil.exe <br>
+                ntdsutil: set dsrm password <br>
+                Reset DSRM Administrator Password: reset password on server null Please type password for DS Restore Mode Administrator Account: ******** Please confirm new password: ******** The password has successfully been reset (CTRL + C) to exit
                 </div>
                 <br>
 “reset password on server null” null means reset on local machine</p>
