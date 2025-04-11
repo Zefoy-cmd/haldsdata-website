@@ -25,12 +25,10 @@
         <h2>Hello!</h2>
         <p>Welcome to my webpage, I’m writing about IT and other stuff.</p>
     </article>
-
     <article class="article">
         <h2>Visit Haldsdata.dk</h2>
         <p>This site is made using GitHub Pages and extremely funky frontpage coding.</p>
     </article>
-
     <article class="article">
         <h2>Latest Security Updates</h2>
         <iframe height="200px" width="400px" src="https://embeds.rss2html.net/embed?url=https%3A%2F%2Fapi.msrc.microsoft.com%2Fupdate-guide%2Frss&amp;template=legacy&amp;embed_title_replacement=MSRC+Security+Update&amp;feed_title_fallback=MSRC+Security+Update&amp;item_count=20"></script>    </article>
@@ -39,30 +37,6 @@
 <!-- Footer Section -->
 <footer>
     <p>&copy; 2025 Haldsdata.dk - All Rights Reserved - Update v1.1.0</p>
-        <p>I'm currently</p>
-        <div id="status" class="status">Checking...</div>
-        <script>
-           async function checkDiscordStatus() {
-               try {
-                   const response = await fetch('https://bot.haldsdata.dk/status');
-                   if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
-                   const data = await response.json();
-                   const statusElement = document.getElementById('status');
-    
-                   if (data.online) {
-                       statusElement.textContent = "Online 😊";
-                       statusElement.style.color = "green";
-                   } else {
-                       statusElement.textContent = "Offline 😴";
-                       statusElement.style.color = "red";
-                   }
-               } catch (error) {
-                   console.error('Error checking Discord status:', error);
-                   document.getElementById('status').textContent = "Error checking status.";
-               }
-           }
-            checkDiscordStatus();
-        </script>
 </footer>
 </body>
 </html>
