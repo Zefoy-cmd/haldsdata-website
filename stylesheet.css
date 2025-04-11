@@ -112,13 +112,3 @@ left-menu {
     padding: 20px;
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2); /* Subtle shadow */
 }
-
-left-menu:a {
-    color: #fff;
-    text-decoration: none;
-    display: block;
-    margin: 10px 0;
-    font-size: 16px;
-    padding: 10px;
-    border-radius: 4px;
-}
