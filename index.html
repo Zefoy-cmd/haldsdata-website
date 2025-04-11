@@ -66,24 +66,25 @@
         </style>
          <div id="status" class="status">Checking...</div>
          <script>
-             async function checkDiscordStatus() {
-                 try {
-                     const response = await fetch('http://45.143.197.61:8024/status'); // Replace with your backend endpoint
-                     const data = await response.json();
-                     const statusElement = document.getElementById('status');
-                     
-                     if (data.online) {
-                         statusElement.textContent = "Online 😊";
-                         statusElement.style.color = "green";
-                     } else {
-                         statusElement.textContent = "Offline 😴";
-                         statusElement.style.color = "red";
-                     }
-                 } catch (error) {
-                     console.error('Error checking Discord status:', error);
-                     document.getElementById('status').textContent = "Error checking status.";
-                 }
-             }
+async function checkDiscordStatus() {
+    try {
+        const response = await fetch('http://45.143.197.61:8024/status');
+        if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
+        const data = await response.json();
+        const statusElement = document.getElementById('status');
+
+        if (data.online) {
+            statusElement.textContent = "Online 😊";
+            statusElement.style.color = "green";
+        } else {
+            statusElement.textContent = "Offline 😴";
+            statusElement.style.color = "red";
+        }
+    } catch (error) {
+        console.error('Error checking Discord status:', error);
+        document.getElementById('status').textContent = "Error checking status.";
+    }
+}
              checkDiscordStatus();
          </script>
     </div>
