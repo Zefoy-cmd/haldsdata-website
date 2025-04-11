@@ -64,6 +64,30 @@
             }
             }
         </style>
+         <div id="status" class="status">Checking...</div>
+
+         <script>
+             async function checkDiscordStatus() {
+                 try {
+                     const response = await fetch('YOUR_BACKEND_API_URL'); // Replace with your backend endpoint
+                     const data = await response.json();
+                     const statusElement = document.getElementById('status');
+                     
+                     if (data.online) {
+                         statusElement.textContent = "Online 😊";
+                         statusElement.style.color = "green";
+                     } else {
+                         statusElement.textContent = "Offline 😴";
+                         statusElement.style.color = "red";
+                     }
+                 } catch (error) {
+                     console.error('Error checking Discord status:', error);
+                     document.getElementById('status').textContent = "Error checking status.";
+                 }
+             }
+     
+             checkDiscordStatus();
+         </script>
     </div>
     <div class="menu menu-right">
         <a href="https://haldsdata.dk">Home</a>
