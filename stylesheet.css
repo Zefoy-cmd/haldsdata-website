@@ -99,16 +99,3 @@ button:hover {
         font-size: 14px; /* Smaller navigation links */
     }
 }
-
-/* Additional CSS for the Left Menu */
-left-menu {
-    width: 200px; /* Fixed width for the menu */
-    position: fixed; /* Stick to the left side */
-    top: 0;
-    left: 0;
-    height: 100%; /* Full height */
-    background-color: #1a1a1a; /* Dark background */
-    color: #fff;
-    padding: 20px;
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2); /* Subtle shadow */
-}
