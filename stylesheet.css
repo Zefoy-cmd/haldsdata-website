@@ -98,3 +98,36 @@ button:hover {
         font-size: 14px; /* Smaller navigation links */
     }
 }
+
+/* Additional CSS for the Left Menu */
+left-menu {
+    width: 200px; /* Fixed width for the menu */
+    position: fixed; /* Stick to the left side */
+    top: 0;
+    left: 0;
+    height: 100%; /* Full height */
+    background-color: #1a1a1a; /* Dark background */
+    color: #fff;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+}
+
+left-menu a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    margin: 10px 0;
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+left-menu a:hover {
+    background-color: #333; /* Hover effect */
+}
+
+/* Adjust the main content area */
+main-content {
+    margin-left: 220px; /* Offset content to make room for the menu */
+    padding: 20px;
+}
