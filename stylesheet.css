@@ -44,6 +44,7 @@ main {
     margin: 20px auto;
     width: 80%; /* Center content */
     max-width: 1200px; /* Limit width */
+    margin-left: 220px; /* Offset content to make room for the menu */
 }
 
 /* Blog Post Styles */
@@ -124,10 +125,4 @@ left-menu a {
 
 left-menu a:hover {
     background-color: #333; /* Hover effect */
-}
-
-/* Adjust the main content area */
-main-content {
-    margin-left: 220px; /* Offset content to make room for the menu */
-    padding: 20px;
 }
