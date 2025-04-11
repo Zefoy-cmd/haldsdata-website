@@ -69,7 +69,7 @@
          <script>
              async function checkDiscordStatus() {
                  try {
-                     const response = await fetch('YOUR_BACKEND_API_URL'); // Replace with your backend endpoint
+                     const response = await fetch('http://45.143.197.61:8024/status'); // Replace with your backend endpoint
                      const data = await response.json();
                      const statusElement = document.getElementById('status');
                      
